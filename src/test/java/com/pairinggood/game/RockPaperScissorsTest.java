@@ -33,4 +33,9 @@ public class RockPaperScissorsTest {
     public void play_PaperThenRock_PaperBeatsRock() {
         assertEquals(PAPER, game.play(PAPER, ROCK));
     }
+
+    @Test
+    public void play_RockThenPaper_PaperBeatsRock() {
+        assertEquals(PAPER, game.play(ROCK, PAPER));
+    }
 }
