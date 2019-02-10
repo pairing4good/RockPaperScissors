@@ -42,4 +42,16 @@ public class RockPaperScissorsTest {
         //assert
         assertEquals(SCISSORS, winner);
     }
+
+    @Test
+    public void play_ScissorThenPaper_ScissorsBeatPaper() {
+        //arrange
+        RockPaperScissors game = new RockPaperScissors();
+
+        //act
+        String winner = game.play(SCISSORS, "paper");
+
+        //assert
+        assertEquals(SCISSORS, winner);
+    }
 }
