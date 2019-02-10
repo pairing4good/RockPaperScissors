@@ -2,7 +2,7 @@ package com.pairinggood.game;
 
 import org.junit.Test;
 
-import static com.pairinggood.game.RockPaperScissors.SCISSORS;
+import static com.pairinggood.game.RockPaperScissors.*;
 import static org.junit.Assert.assertEquals;
 
 public class RockPaperScissorsTest {
@@ -13,10 +13,10 @@ public class RockPaperScissorsTest {
         RockPaperScissors game = new RockPaperScissors();
 
         //act
-        String winner = game.play("rock", SCISSORS);
+        String winner = game.play(ROCK, SCISSORS);
 
         //assert
-        assertEquals("rock", winner);
+        assertEquals(ROCK, winner);
     }
 
     @Test
@@ -25,10 +25,10 @@ public class RockPaperScissorsTest {
         RockPaperScissors game = new RockPaperScissors();
 
         //act
-        String winner = game.play(SCISSORS, "rock");
+        String winner = game.play(SCISSORS, ROCK);
 
         //assert
-        assertEquals("rock", winner);
+        assertEquals(ROCK, winner);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class RockPaperScissorsTest {
         RockPaperScissors game = new RockPaperScissors();
 
         //act
-        String winner = game.play("paper", SCISSORS);
+        String winner = game.play(PAPER, SCISSORS);
 
         //assert
         assertEquals(SCISSORS, winner);
@@ -49,7 +49,7 @@ public class RockPaperScissorsTest {
         RockPaperScissors game = new RockPaperScissors();
 
         //act
-        String winner = game.play(SCISSORS, "paper");
+        String winner = game.play(SCISSORS, PAPER);
 
         //assert
         assertEquals(SCISSORS, winner);
