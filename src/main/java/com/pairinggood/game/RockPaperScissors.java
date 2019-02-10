@@ -20,6 +20,10 @@ public class RockPaperScissors {
             return SCISSORS;
         }
 
+        if (gestures.contains(PAPER) && gestures.contains(ROCK)) {
+            return PAPER;
+        }
+
         return ROCK;
     }
 }
